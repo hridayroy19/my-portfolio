@@ -60,7 +60,8 @@ const templateParms = {
             <h1 className=" lg:text-4xl font-bold text-center py-2 lg:py-5">Have Questions? <br />CONTACT US 
             </h1>
         <div className=" grid md:grid-cols-2 grid-cols-1 ">
-            <div className=" ml-16 mb-3 lg:ml-1" >
+ <div data-aos="fade-right">
+ <div className=" ml-16 mb-3 lg:ml-1" >
                 <h2 className=" font-bold lg:text-2xl">Ask Our Team</h2>
                  <p className=" mt-2 font-semibold"> Want to contact us directly? No problem. <br />
                   We are always here for you.</p>
@@ -104,7 +105,9 @@ const templateParms = {
 </div>
 
 </div>
-            <div className="w-full">
+ </div>
+          <div data-aos="fade-left">
+          <div className="w-full">
             <div className="card shrink-0  ">
       <form onSubmit={handelMassage} >
        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-2 w-full">
@@ -141,6 +144,7 @@ const templateParms = {
       </form>
     </div>
             </div>
+          </div>
         </div>
  
 
