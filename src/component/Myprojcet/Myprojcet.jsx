@@ -2,6 +2,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
+import { BiLogoJquery } from "react-icons/bi";
 const Myprojcet = () => {
     return (
         <div>
@@ -40,7 +41,7 @@ const Myprojcet = () => {
     <h2 className="lg:text-[25px] font-medium"> Full Stack Devloper</h2>
     <h2 className="text-[18px] font-medium"> Projcet Name :Online Group-Study assignment</h2>
     <h2 className="text-[18px] font-medium underline mb-2"> Live Link : <a href="https://online-grup-study.web.app/"> https://online-grup-study.web.app/</a> </h2>
-    <h2 className="text-[32px] bg-white  font-medium flex">  <IoLogoFirebase /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
+    <h2 className="text-[32px]   font-medium flex">  <IoLogoFirebase /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
 
 </div>
             </div>
@@ -75,7 +76,7 @@ const Myprojcet = () => {
     <h2 className="lg:text-[25px] font-medium"> Full Stack Devloper</h2>
     <h2 className="text-[18px] font-medium"> Projcet Name :brithday-partics</h2>
     <h2 className="text-[18px] font-medium underline mb-2"> Live Link : <a href="https://brithday-partics.web.app"> https://brithday-partics.web.app</a> </h2>
-    <h2 className="text-[32px] bg-white  font-medium flex">  <IoLogoFirebase /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
+    <h2 className="text-[32px]  font-medium flex">  <IoLogoFirebase /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
 
 </div>
             </div>
@@ -114,7 +115,7 @@ const Myprojcet = () => {
     <h2 className="lg:text-[25px] font-medium"> Full Stack Devloper</h2>
     <h2 className="text-[18px] font-medium"> Projcet Name :building-menagemant</h2>
     <h2 className="text-[18px] font-medium underline mb-2"> Live Link : <a href="https://building-menagemant.web.app/"> https://building-menagemant.web.app/</a> </h2>
-    <h2 className="text-[32px] bg-white  font-medium flex">  <IoLogoFirebase /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
+    <h2 className="text-[32px]   font-medium flex">  <IoLogoFirebase /> <BiLogoJquery /> <DiMongodb/> <FaReact/> <IoLogoNodejs/> </h2>
 
 </div>
             </div>

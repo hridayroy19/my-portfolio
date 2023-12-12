@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/Provider";
 import { FaUserLarge } from "react-icons/fa6";
+// import { FaArrowAltCircleDown } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -85,13 +86,13 @@ const Navbar = () => {
           >
             CONTACT
           </NavLink>
-          <button
+          {/* <button
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-[#4441f0]  underline text-[17px] font-semibold" : ""
             }
           >
-          <a href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME </a>
-          </button>
+          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME <FaArrowAltCircleDown/> </a>
+          </button> */}
     </ul>
   </div>
   <div  className="navbar-end">
