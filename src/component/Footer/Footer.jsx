@@ -45,7 +45,30 @@ const Footer = () => {
       </div>
     </fieldset>
   </form>
+
 </footer> 
+    <hr />
+<div className="flex text-center lg:flex-row flex-col items-center py-5 justify-between px-20 ">
+ <div>
+ <p>2022. Learn With Hridoy - All rights reserved.</p>
+ </div>
+   <div>
+{/* hello https://i.ibb.co/SNGQdGq/nexus.png
+https://i.ibb.co/g7pH3Ds/bkash-1.png
+https://i.ibb.co/3dQY8M7/rocket.png
+https://i.ibb.co/g7pH3Ds/bkash-1.png */}
+<marquee  direction="left">
+
+<div className="flex  w-[400px]  mt-3 gap-2">
+<img src="https://i.ibb.co/g7pH3Ds/bkash-1.png" alt="" className=" w-[25%] h-[30%]" />
+<img src="https://i.ibb.co/3dQY8M7/rocket.png" alt="" className=" w-[25%] h-[30%] " />
+<img src="https://i.ibb.co/SNGQdGq/nexus.png" alt="" className=" w-[25%] h-[30%] "/>
+<img src="https://i.ibb.co/g7pH3Ds/bkash-1.png" alt="" className=" w-[25%] h-[30%] " />
+<img src="https://i.ibb.co/3dQY8M7/rocket.png" alt="" className=" w-[25%] h-[30%] "/>
+</div>
+</marquee>
+   </div>
+  </div>
         </>
     );
 };

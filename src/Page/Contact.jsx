@@ -56,7 +56,7 @@ const templateParms = {
 
 
     return (
-        <div className="px-20 bg-gray-200 mb-7">
+        <div className="px-20 bg-gray-200">
             <h1 className=" lg:text-4xl font-bold text-center py-2 lg:py-5">Have Questions? <br />CONTACT US 
             </h1>
         <div className=" grid md:grid-cols-2 grid-cols-1 ">

@@ -2,7 +2,7 @@
 const Skaill = () => {
     return (
         <div className=" py-8">
-          <h2 className="text-3xl font-bold  mb-5 uppercase mt-6 text-green-500"> My Skell</h2>
+          <h2 className="text-3xl font-bold  mb-9 uppercase mt-6 text-green-500"> My Skell</h2>
           <div className="grid lg:grid-cols-4 gap-4 md:grid-cols-2 grid-cols-1">
             {/* fast */}
 <div  data-aos="fade-right">
