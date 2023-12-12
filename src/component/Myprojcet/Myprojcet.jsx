@@ -10,7 +10,8 @@ const Myprojcet = () => {
          <h1 className="mt-7 mb-7 items-center text-center text-3xl uppercase text-green-500 font-bold">  My Top Projcet</h1>
 
    <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
-   <div className=" lg:w-[650px]  bg-gray-300 mt-6 items-center  border lg:h-[300px] flex flex-col lg:flex-row">
+ <div data-aos="fade-down-right">
+ <div className=" lg:w-[650px]  bg-gray-300 mt-6 items-center  border lg:h-[300px] flex flex-col lg:flex-row">
             <div className="carousel w-[350px] h-[300px] py-3 ">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/pLKCtw7/Screenshot-2023-12-11-230338.png
@@ -45,8 +46,10 @@ const Myprojcet = () => {
 
 </div>
             </div>
+ </div>
 
-            <div className=" lg:w-[650px]  bg-gray-300 mt-6 items-center  border lg:h-[300px] flex flex-col lg:flex-row ">
+        <div data-aos="fade-up-left">
+        <div className=" lg:w-[650px]  bg-gray-300 mt-6 items-center  border lg:h-[300px] flex flex-col lg:flex-row ">
             <div className="carousel w-[350px] h-[300px] py-3 ">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/34rMZGr/Screenshot-2023-12-12-015601.png" className="lg:w-full p-2" />
@@ -80,6 +83,7 @@ const Myprojcet = () => {
 
 </div>
             </div>
+        </div>
 
 
    </div>

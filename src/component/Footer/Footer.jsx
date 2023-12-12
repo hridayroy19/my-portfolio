@@ -1,4 +1,6 @@
-
+ import { FaFacebook } from "react-icons/fa";
+ import { FaGithub } from "react-icons/fa";
+ import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -29,7 +31,14 @@ const Footer = () => {
     <fieldset className="form-control w-80">
       <label className="label">
         <span className="label-text">Enter your email address</span>
+        
       </label> 
+ {/* https://www.linkedin.com/in/hridoy-chandra-roy-9313732a4/
+ https://github.com/hridayroy19
+ */}
+      <div className="text-3xl p-3 gap-3 flex"> <span>  <a href="https://www.facebook.com/hridayray.hriday.1/"><FaFacebook /> </a></span> <span>
+        <samp> <a href="https://github.com/hridayroy19"><FaGithub/></a></samp></span> <span> <a href="https://www.linkedin.com/in/hridoy-chandra-roy-9313732a4/ ">< FaLinkedin/></a></span> </div>
+
       <div className="join">
         <input type="text" placeholder="username@site.com" className="input input-bordered join-item" /> 
         <button className="btn btn-primary join-item">Subscribe</button>

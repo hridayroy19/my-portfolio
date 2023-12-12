@@ -1,7 +1,9 @@
-
+import { FaArrowAltCircleDown } from "react-icons/fa";
 const Banner = () => {
     return (
-        <>
+        <div  data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
         <div className="hero bg-green-200 h-[90vh] ">
             <div className="hero-content items-center flex-col lg:gap-28 lg:flex-row-reverse ">
               <img src="https://i.ibb.co/PtV8QKv/20230409224628-IMG-7255.jpg" className="max-w-sm w-[40%]  lg:w-full  rounded-[50%] mt-2 lg:mt-14 " />
@@ -10,6 +12,15 @@ const Banner = () => {
                 <h1 className=" lg:py-7 lg:text-5xl text-xl  font-bold text-[#111]"> Hridoy Chandra Roy </h1> 
                     <p className=" font-medium text-[#111]  lg:text-2xl  ">Hello 👋, I’m Hridoy 😊, .I love to do most of the things with <br />
                      javaScript.I am Skilled At MERN Stack. I have a strong passion for learning & implementing new web technologies and standards. </p>
+
+
+                     <button
+            className="text-[#4441f0] mb-4  mt-6  text-[17px] font-semibold">
+          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME <FaArrowAltCircleDown/> </a>
+          </button>
+
+
+
                     <div className=" lg:mt-5 ">
               <input type="text" placeholder="Searching for..." className="input rounded-3xl input-bordered lg:py-3 w-full max-w-md" />
 
@@ -44,7 +55,7 @@ const Banner = () => {
         </div> */}
 
 
-</>
+</div>
     );
 };
 

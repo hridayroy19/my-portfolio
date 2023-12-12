@@ -4,11 +4,15 @@ const Study = () => {
       <h1 className="text-3xl text-green-500 mt-7 font-bold mb-6 ">
         Best Study Websites For Students In 2023
       </h1>
+
+      {/*  data-aos="flip-up" */}
+      <div data-aos="flip-up">
       <img
         src="https://i.ibb.co/r33q5QJ/p-1600.webp"
         alt=""
         className="w-full"
       />
+      </div>
       <p className="mt-9">
         শিক্ষা এবং পড়ালেখা মানুষের জীবনে অত্যন্ত গুরুত্বপূর্ণ। এটি সমাজে সচেতনতা
         ও সমৃদ্ধির জন্য একটি মৌলিক প্রয়োজনীয় উপাদান। পড়ালেখা মানুষকে নতুন

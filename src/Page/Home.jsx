@@ -3,6 +3,8 @@ import Exprence from "../component/Exprence/Exprence";
 import Myprojcet from "../component/Myprojcet/Myprojcet";
 import Skaill from "../component/Skaill/Skaill";
 import Study from "../component/Study/Study";
+import Contact from "./Contact";
+// import Scontace from "../component/";
 
 const Home = () => {
     return (
@@ -16,6 +18,7 @@ const Home = () => {
           </div>
             <Study></Study>
            </div>
+           <Contact/>
         </div>
     );
 };
