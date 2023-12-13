@@ -13,10 +13,9 @@ const Navbar = () => {
       .then(() => {})
       .catch((error) => console.log(error));
   };
-
     return (
         <>
-<div className="navbar opacity-80 px-20 bg-gray-300">
+<div className="navbar  opacity-100 px-20 bg-gray-300">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -91,7 +90,7 @@ const Navbar = () => {
               isPending ? "pending" : isActive ? "text-[#4441f0]  underline text-[17px] font-semibold" : ""
             }
           >
-          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME <FaArrowAltCircleDown/> </a>
+          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME</a>
           </button> */}
     </ul>
   </div>

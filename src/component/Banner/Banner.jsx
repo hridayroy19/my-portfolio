@@ -4,7 +4,7 @@ const Banner = () => {
         <div  data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000">
-        <div className="hero bg-green-200 h-[90vh] ">
+        <div className="hero bg-blue-100 opacity-90 h-[90vh] ">
             <div className="hero-content items-center flex-col lg:gap-28 lg:flex-row-reverse ">
               <img src="https://i.ibb.co/PtV8QKv/20230409224628-IMG-7255.jpg" className="max-w-sm w-[40%]  lg:w-full  rounded-[50%] mt-2 lg:mt-14 " />
               <div className="">
