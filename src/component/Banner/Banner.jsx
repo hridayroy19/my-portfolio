@@ -10,7 +10,7 @@ const Banner = () => {
               <div className="">
                 {/* <h4 className="text-3xl font-bold text-[#111]">---SALE FEVER---</h4> */}
                 <h1 className=" lg:py-7 lg:text-5xl text-xl  font-bold text-[#111]"> Hridoy Chandra Roy </h1> 
-                    <p className=" font-medium text-[#111]  lg:text-2xl  ">Hello 👋, I’m Hridoy 😊, .I love to do most of the things with <br />
+                    <p className=" font-medium text-[#111]  lg:text-2xl  ">Hello👋, I’m Hridoy 😊, .I love to do most of the things with <br />
                      javaScript.I am Skilled At MERN Stack. I have a strong passion for learning & implementing new web technologies and standards. </p>
 
 
