@@ -1,6 +1,7 @@
  import { FaFacebook } from "react-icons/fa";
  import { FaGithub } from "react-icons/fa";
  import { FaLinkedin } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -9,12 +10,12 @@ const Footer = () => {
   <nav>
     <header className="footer-title">Services</header> 
     <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
+    <a className="link link-hover"> <Link> </Link>  Design</a>
   </nav> 
   <nav>
     <header className="footer-title">Company</header> 
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
+    <a className="link link-hover"> <Link to={"/about"}> About us</Link>  </a>
+    <a className="link link-hover"> <Link to={"/contact"}>Contact </Link> </a>
   </nav> 
   <nav>
     <header className="footer-title">Legal</header> 
