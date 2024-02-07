@@ -17,11 +17,11 @@ const Contact = () => {
     const email = from.email.value;
     const subjcet = from.subjcet.value;
     const massage = from.massage.value;
-    // console.log(name,phone,email,subjcet,massage);
+    console.log(name,phone,email,subjcet,massage);
   
 
-const serviceid ='service_4ps0p99';
-const templeteId ='template_xsex3b9';
+const serviceid ='service_kbf5rsj';
+const templeteId ='template_6ukydir';
 const publicKey = '_M-Xno-tG5TitAcIS'
 
 

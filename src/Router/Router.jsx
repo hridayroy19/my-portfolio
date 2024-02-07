@@ -7,6 +7,7 @@ import Login from "../Page/Login ";
 import Register from "../Page/Register";
 
 
+
 const MyRouter =createBrowserRouter([{
     path:"/",
     element:<Main></Main>,
@@ -30,6 +31,7 @@ const MyRouter =createBrowserRouter([{
     path:"/register",
     element:<Register></Register>
 }
+
 ]
 }])
 

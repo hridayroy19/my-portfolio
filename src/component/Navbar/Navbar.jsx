@@ -46,14 +46,14 @@ const Navbar = () => {
           >
             CONTACT
           </NavLink>
-          <NavLink 
-            // to="/dashboard"
+          {/* <NavLink 
+            to="/card"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "text-green-500 underline text-[17px] font-semibold" : ""
             }
           >
-            resume
-          </NavLink>
+            Card
+          </NavLink> */}
       </ul>
     </div>
     <h1 className="flex items-center text-xl font-bold text-black gap-2"> <FaUserLarge/> HRIDOY ROY</h1>

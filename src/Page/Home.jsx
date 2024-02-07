@@ -5,10 +5,20 @@ import Skaill from "../component/Skaill/Skaill";
 import Study from "../component/Study/Study";
 import Contact from "./Contact";
 // import Scontace from "../component/";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 const Home = () => {
     return (
-        <div>
+        <>
+                <div>
+  <MessengerCustomerChat
+    pageId="103365232464560"
+    appId="763941302317239"
+
+  />
+
+      </div>
             <Banner></Banner>
            <div className="px-20">
            <Skaill></Skaill>
@@ -19,7 +29,15 @@ const Home = () => {
             <Study></Study>
            </div>
            <Contact/>
-        </div>
+           <div>
+  <MessengerCustomerChat
+    pageId="103365232464560"
+    appId="763941302317239"
+
+  />
+
+      </div>
+        </>
     );
 };
 
