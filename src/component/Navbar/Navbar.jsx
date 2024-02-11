@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/Provider";
 import { FaUserLarge } from "react-icons/fa6";
-// import { FaArrowAltCircleDown } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -13,6 +12,8 @@ const Navbar = () => {
       .then(() => {})
       .catch((error) => console.log(error));
   };
+
+  // commit
     return (
         <>
 <div className="navbar  opacity-100 px-20 bg-gray-300">
@@ -46,18 +47,10 @@ const Navbar = () => {
           >
             CONTACT
           </NavLink>
-          {/* <NavLink 
-            to="/card"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-green-500 underline text-[17px] font-semibold" : ""
-            }
-          >
-            Card
-          </NavLink> */}
+      
       </ul>
     </div>
     <h1 className="flex items-center text-xl font-bold text-black gap-2"> <FaUserLarge/> HRIDOY ROY</h1>
-    {/* <a className=""><img src="https://i.ibb.co/c2HQTcL/channelprofile.jpg" alt="" className="w-[20%] h-[25%]  rounded-lg bg-gray-300  " /></a> */}
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal gap-4 px-1">
@@ -99,16 +92,6 @@ const Navbar = () => {
     user ?
     <>
     <div className= " flex justify-center items-center gap-2">
-    {/* <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
-        <div className="w-10 rounded-full">
-          {
-            user &&
-            <img src={user.photoUrl} alt="" />
-          }
-          
-        </div>
-
-      </label> */}
       { user &&
         <div className="gap-2 mr-2"><p>{user.displayName}</p>
            
@@ -121,10 +104,7 @@ const Navbar = () => {
     </>
     : <Link to='/login' ><button  className="text-white bg-[#4441f0]  text-[17px] font-semibold uppercase p-1 py-1 px-1 text-center w-20 rounded-2xl">Login</button></Link>
   }
-  
-
-  {/* <a className=" text-white bg-[#4441f0]  text-[17px] font-semibold uppercase p-1 py-1 px-1 text-center w-20 rounded-2xl "> <Link to="/login"> Login </Link>  </a> */}
-  </div>
+    </div>
 </div>
         </>
     );
