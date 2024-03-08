@@ -1,14 +1,8 @@
-
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlineAddIcCall } from "react-icons/md";
 
 const Contact = () => {
-  const contact_info = [
-    { logo: "mail", text: "codeaprogram@gmail.com" },
-    { logo: "logo-whatsapp", text: "123 456 780" },
-    {
-      logo: "location",
-      text: "demo location",
-    },
-  ];
   return (
     <section id="contact" className="py-10 px-3 text-white">
       <div className="text-center mt-8">
@@ -28,20 +22,19 @@ const Contact = () => {
             <button className="btn-primary w-fit">Send Message</button>
           </form>
           <div className="flex flex-col  gap-7 ">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex flex-row  
+            <div
+              className="flex flex-row  
                   text-left gap-4 flex-wrap items-center"
-              >
-                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
-                <p className="md:text-base text-sm  break-words">
-                  {contact.text}
-                </p>
+            >
+              <div className=" text-4xl  items-center justify-center text-white rounded-full">
+                <p className="flex gap-4 items-center "> <MdOutlineEmail className=" text-white bg-cyan-600 p-1 rounded-full"></MdOutlineEmail> <span className="text-[22px] ">hrhridoyroy503@gmail.com</span> </p>
+
+                <p className="flex gap-4 mb-2 items-center "> <MdOutlineAddIcCall className=" mt-2 text-white p-1 bg-cyan-600 rounded-full"></MdOutlineAddIcCall> <span className="text-[22px] "> +8801738211936 </span> </p>
+
+                <p className="flex gap-4 items-center "> <CiLocationOn className=" text-white bg-cyan-600 p-1 rounded-full"></CiLocationOn> <span className="text-[22px] "> Dinajpur , Bangladesh </span> </p>
               </div>
-            ))}
+
+            </div>
           </div>
         </div>
       </div>

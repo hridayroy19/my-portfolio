@@ -5,6 +5,7 @@ import Contact from "../Page/Contact";
 import About from "../Page/About";
 import Login from "../Page/Login ";
 import Register from "../Page/Register";
+import Project from "../component/Myprojcet/Myprojcet";
 
 
 
@@ -22,6 +23,10 @@ const MyRouter =createBrowserRouter([{
     {
         path:"/about",
         element:<About></About>
+    },
+    {
+        path:"/project",
+        element:<Project></Project>
     },
 {
     path:"/login",

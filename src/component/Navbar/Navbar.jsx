@@ -1,75 +1,47 @@
-import  { useEffect, useState } from "react";
+import { styles } from './Style.js';
+import { NavLink } from "react-router-dom";
+
+
 
 const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
-  const [open, setOpen] = useState(false);
-  const menuLinks = [
-    { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
-  ];
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
-      window.scrollY > 0 ? setSticky(true) : setSticky(false);
-    });
-  }, []);
-  return (
-    <nav
-      className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-white/60  text-gray-900" : "text-white"
-      }`}
-    >
-      <div className="flex items-center justify-between">
-        <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            A<span className="text-cyan-600">le</span>x
-          </h4>
-        </div>
-        <div
-          className={` ${
-            sticky ? "md:bg-white/0 bg-white" : "bg-white"
-          } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
-        >
-          <ul className="flex items-center gap-1 py-2 text-lg">
-            {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-cyan-600">
-                <a href={menu?.link}>{menu?.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div
-          onClick={() => setOpen(!open)}
-          className={`z-[999]  ${
-            open ? "text-gray-900" : "text-gray-100"
-          } text-3xl md:hidden m-5`}
-        >
-          <ion-icon name="menu"></ion-icon>
-        </div>
-        <div
-          className={`md:hidden text-gray-900 absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-white top-0 duration-300 ${
-        open ? "right-0" : "right-[-100%]"
-      }`}
-        >
-          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
-            {menuLinks?.map((menu, i) => (
-              <li
-                onClick={() => setOpen(false)}
-                key={i}
-                className="px-6 hover:text-cyan-600"
-              >
-                <a href={menu?.link}>{menu?.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
+    
+    const navLink = <>
+    <li className="text-lg font-semibold"><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#915] underline" : "text-white" }>Home</NavLink></li>
+    <li className="text-lg font-semibold"><NavLink to="/about" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#915] underline" : "text-white" }>About</NavLink></li>
+    <li className="text-lg font-semibold"><NavLink to="/project" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#915] underline" : "text-white" }>Projects</NavLink></li>
+    <li className="text-lg font-semibold"><NavLink to="/contact" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#915] underline" : "text-white" }>Contact</NavLink></li>
+    </>
+    
+    return (
+      <nav className={`${styles.paddingX} w-full py-2 fixed top-0 z-20 bg-transparent`}>
+         <div className="navbar flex justify-center shadow-lg">
+           <div className="navbar-start">
+                 <div className="flex md:ml-2 font-serif">
+                      <span className="text-lg -ml-2 lg:-ml-0 lg:text-3xl font-bold text-white">Hridoy</span><span className='text-xl lg:text-3xl font-bold text-white px-1'>|</span><span className="text-amber-600 sm:text-sm lg:text-lg mt-1 lg:mt-1.5 font-bold">Web Developer</span>
+                   </div>
+           </div>
+           <div className="navbar-end hidden lg:flex">
+             <ul className="menu menu-horizontal px-1">
+             {
+               navLink
+             }
+             </ul>
+           </div>
+           <div className="navbar-end lg:hidden">   
+           <div className="dropdown lg:hidden">
+               <label tabIndex={0} className="btn btn-ghost text-white btn-circle">
+                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+               </label>
+               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2  shadow bg-black rounded-box w-52">
+                 {
+                   navLink
+                 }
+               </ul>
+               </div>  
+       </div>
+   </div>
+      </nav>
+   );
 };
 
 export default Navbar;
