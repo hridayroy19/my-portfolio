@@ -1,113 +1,75 @@
-import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../Provider/Provider";
-import { FaUserLarge } from "react-icons/fa6";
+import  { useEffect, useState } from "react";
 
 const Navbar = () => {
-
-  const { user, logOut } = useContext(AuthContext);
-
-  const handelLogut = () => {
-    logOut()
-      .then(() => {})
-      .catch((error) => console.log(error));
-  };
-
-  // commit
-    return (
-        <>
-<div className="navbar  opacity-100 px-20 bg-gray-300">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm gap-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <NavLink
-            to="/"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#4441f0] underline text-[17px] font-semibold " : ""
-            }
-          >
-            HOME
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#4441f0] underline text-[17px] font-semibold " : ""
-            }
-          >
-            ABOUT
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#4441f0] underline text-[17px] font-semibold" : ""
-            }
-          >
-            CONTACT
-          </NavLink>
-      
-      </ul>
-    </div>
-    <h1 className="flex items-center text-xl font-bold text-black gap-2"> <FaUserLarge/> HRIDOY ROY</h1>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal gap-4 px-1">
-    <NavLink
-            to="/"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-green-500 underline text-[17px] font-semibold " : ""
-            }
-          >
-            HOME
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-green-500 underline text-[17px] font-semibold " : ""
-            }
-          >
-            ABOUT
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-green-500 underline text-[17px] font-semibold" : ""
-            }
-          >
-            CONTACT
-          </NavLink>
-          {/* <button
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#4441f0]  underline text-[17px] font-semibold" : ""
-            }
-          >
-          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME</a>
-          </button> */}
-    </ul>
-  </div>
-  <div  className="navbar-end">
-  {
-    user ?
-    <>
-    <div className= " flex justify-center items-center gap-2">
-      { user &&
-        <div className="gap-2 mr-2"><p>{user.displayName}</p>
-           
+  const [sticky, setSticky] = useState(false);
+  const [open, setOpen] = useState(false);
+  const menuLinks = [
+    { name: "HOME", link: "#home" },
+    { name: "ABOUT", link: "#about" },
+    { name: "SKILLS", link: "#skills" },
+    { name: "PROJECTS", link: "#projects" },
+    { name: "CONTACT", link: "#contact" },
+  ];
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      window.scrollY > 0 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
+  return (
+    <nav
+      className={`fixed w-full left-0 top-0 z-[999] ${
+        sticky ? "bg-white/60  text-gray-900" : "text-white"
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <div className="mx-7">
+          <h4 className="text-4xl uppercase font-bold">
+            A<span className="text-cyan-600">le</span>x
+          </h4>
         </div>
-     
-        }
-    </div>
-
-    <button onClick={handelLogut} className="text-white bg-[#4441f0]  text-[17px] font-semibold uppercase p-1 py-2 px-1 text-center w-20 rounded-2xl">LoGOut</button>
-    </>
-    : <Link to='/login' ><button  className="text-white bg-[#4441f0]  text-[17px] font-semibold uppercase p-1 py-1 px-1 text-center w-20 rounded-2xl">Login</button></Link>
-  }
-    </div>
-</div>
-        </>
-    );
+        <div
+          className={` ${
+            sticky ? "md:bg-white/0 bg-white" : "bg-white"
+          } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
+        >
+          <ul className="flex items-center gap-1 py-2 text-lg">
+            {menuLinks?.map((menu, i) => (
+              <li key={i} className="px-6 hover:text-cyan-600">
+                <a href={menu?.link}>{menu?.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          onClick={() => setOpen(!open)}
+          className={`z-[999]  ${
+            open ? "text-gray-900" : "text-gray-100"
+          } text-3xl md:hidden m-5`}
+        >
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <div
+          className={`md:hidden text-gray-900 absolute w-2/3 h-screen
+      px-7 py-2 font-medium bg-white top-0 duration-300 ${
+        open ? "right-0" : "right-[-100%]"
+      }`}
+        >
+          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
+            {menuLinks?.map((menu, i) => (
+              <li
+                onClick={() => setOpen(false)}
+                key={i}
+                className="px-6 hover:text-cyan-600"
+              >
+                <a href={menu?.link}>{menu?.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

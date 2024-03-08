@@ -1,48 +1,58 @@
 
-const Skaill = () => {
-    return (
-        <div className=" py-8">
-          <h2 className="text-3xl font-bold mt-40  mb-9 uppercase lg:mt-6 text-green-500"> My Skell</h2>
-          <div className="grid lg:grid-cols-4 gap-4 md:grid-cols-2 grid-cols-1">
-            {/* fast */}
-<div  data-aos="fade-right">
-<div className=" lg:w-[300px] w-[250px] px-4 rounded-md bg-gray-300 items-center text-center h-[100px]  gap-3 flex shadow-xl">
-<img src="https://i.ibb.co/jDvF0xz/mongodb-logo-D13-D67-C930-seeklogo-com.png" alt="Movie" className="w-[20%] items-center  "/>
-  <div className="">
-    <h2 className="">New movie is released!
-    <br /> ipsum dolor sit amet consectetur</h2>
-  </div>
-</div>
-</div>
-            {/* fast */}
-          <div className="lg:w-[300px] w-[250px] px-4  rounded-md bg-gray-300 items-center text-center h-[100px] gap-3 flex shadow-xl">
-<img src="https://i.ibb.co/hBkXWr2/download.jpg" alt="Movie" className="w-[20%] items-center rounded-[10px]   "/>
-  <div className="">
-    <h2 className="">New movie is released!
-    <br /> ipsum dolor sit amet consectetur</h2>
-  </div>
-</div>
-            {/* 2fast */}
-          <div className=" lg:w-[300px] w-[250px] px-4 rounded-md bg-gray-300 items-center text-center h-[100px] gap-3 flex shadow-xl">
-<img src="https://i.ibb.co/fD2C9HJ/download-1.jpg" alt="Movie" className="w-[20%] items-center rounded-[10px]  "/>
-  <div className="">
-    <h2 className="">New movie is released!
-    <br /> ipsum dolor sit amet consectetur</h2>
-  </div>
-</div>
-            {/* fastc    data-aos="fade-left" */}
-<div data-aos="fade-left">
-<div className=" lg:w-[300px] w-[250px] px-4  rounded-md bg-gray-300 items-center text-center h-[100px] gap-3 flex shadow-xl">
-<img src="https://i.ibb.co/YRfjsJs/282599.webp" alt="Movie" className="w-[20%] items-center rounded-[10px]   "/>
-  <div className="">
-    <h2 className="">New movie is released!
-    <br /> ipsum dolor sit amet consectetur</h2>
-  </div>
-</div>
-</div>
-          </div>
+
+const Skills = () => {
+  const skills = [
+    {
+      logo: "logo-html5",
+      level: "Advance",
+      count: 86,
+    },
+    {
+      logo: "logo-css3",
+      level: "Expect",
+      count: 90,
+    },
+    {
+      logo: "logo-nodejs",
+      level: "Beginner",
+      count: 40,
+    },
+    {
+      logo: "logo-react",
+      level: "Intermediate",
+      count: 80,
+    },
+  ];
+  return (
+    <section id="skills" className="py-10 bg-gray-800 relative">
+      <div className="mt-8 text-gray-100 text-center">
+        <h3 className="text-4xl font-semibold">
+          My <span className="text-cyan-600">Skills</span>
+        </h3>
+        <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+        <div className="flex items-center justify-center mt-12 gap-10 flex-wrap">
+          {skills?.map((skill, i) => (
+            <div
+              key={i}
+              className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
+            >
+              <div
+                style={{
+                  background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
+                }}
+                className="w-32 h-32 flex items-center justify-center rounded-full"
+              >
+                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
+                  <ion-icon name={skill.logo}></ion-icon>
+                </div>
+              </div>
+              <p className="text-xl mt-3">{skill.level}</p>
+            </div>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
-export default Skaill;
+export default Skills;

@@ -1,169 +1,52 @@
-// import { useState } from "react";
-import { BsFillChatSquareFill, BsFillEnvelopeFill, BsFillTelephoneFill} from "react-icons/bs";
-import emailjs from '@emailjs/browser';
-import toast from "react-hot-toast";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+
+
 const Contact = () => {
+  const contact_info = [
+    { logo: "mail", text: "codeaprogram@gmail.com" },
+    { logo: "logo-whatsapp", text: "123 456 780" },
+    {
+      logo: "location",
+      text: "demo location",
+    },
+  ];
+  return (
+    <section id="contact" className="py-10 px-3 text-white">
+      <div className="text-center mt-8">
+        <h3 className="text-4xl font-semibold">
+          Contact <span className="text-cyan-600">Me</span>
+        </h3>
+        <p className="text-gray-400 mt-3 text-lg">Get in touch</p>
 
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState('');
-
-
-  const handelMassage = e =>{
-    e.preventDefault();
-    const from = e.target;
-    const name = from.name.value;
-    const phone = from.phone.value;
-    const email = from.email.value;
-    const subjcet = from.subjcet.value;
-    const massage = from.massage.value;
-    console.log(name,phone,email,subjcet,massage);
-  
-
-const serviceid ='service_kbf5rsj';
-const templeteId ='template_6ukydir';
-const publicKey = '_M-Xno-tG5TitAcIS'
-
-
-const templateParms = {
-  form_name : name,
-  form_phone : phone,
-  form_email : email,
-  form_subjcet : subjcet,
-  form_massage:massage
-};
-
-  emailjs.send(serviceid, templeteId, templateParms, publicKey)
-      .then((response) => {
-        console.log('Email sent successfully!', response);
-        toast("success full submite")
-        // setName('');
-        // setEmail('');
-        // setMessage('');
-      })
-      .catch((error) => {
-        console.error('Error sending email:', error);
-      });
-
-  }
-
-    return (
-// message
-      <>
-                  <div>
-  <MessengerCustomerChat
-    pageId="103365232464560"
-    appId="763941302317239"
-
-  />
-
-      </div>
-      
-      <div className="px-20 bg-gray-200">
-            <h1 className=" lg:text-4xl font-bold text-center py-2 lg:py-5">Have Questions? <br />CONTACT US 
-            </h1>
-        <div className=" grid md:grid-cols-2 grid-cols-1 ">
- <div data-aos="fade-right">
- <div className=" ml-16 mb-3 lg:ml-1" >
-                <h2 className=" font-bold lg:text-2xl">Ask Our Team</h2>
-                 <p className=" mt-2 font-semibold"> Want to contact us directly? No problem. <br />
-                  We are always here for you.</p>
-
-                  <div className="avatar-group mt-6 -space-x-6">
-  <div className="avatar">
-    <div className="w-12">
-      <img src="https://i.ibb.co/LzWxcQc/assignment-helps-fbdf10d1.webp" />
-    </div>
-  </div>
-  <div className="avatar">
-    <div className="w-12">
-      <img src="https://i.ibb.co/7zn0Gc0/editing-help-service-d5ba1cce.webp" />
-    </div>
-  </div>
-  <div className="avatar">
-    <div className="w-12">
-      <img src="https://i.ibb.co/8NSMWkR/every-student-ment-f7a30282.webp" />
-    </div>
-  </div>
-  <div className="avatar placeholder">
-    <div className="w-12 bg-neutral-focus text-neutral-content">
-      <span>+99</span>
-    </div>
-  </div>
-</div>  
-<div className="mt-9">
-    <div className="flex items-center gap-2">
-    <BsFillTelephoneFill></BsFillTelephoneFill>
-    <p className="  font-bold">  0177770077</p>
-         
-    </div>
-    <div className="flex items-center gap-2">
-        <BsFillEnvelopeFill></BsFillEnvelopeFill>
-        <h2>hrhridoyroy@gmail.com </h2>
-    </div>
-    
-
-    <button className="btn mt-6 bg-green-500 btn-outline btn-secondary"> <span><BsFillChatSquareFill></BsFillChatSquareFill></span> Start Live chart</button>
-
-</div>
-
-</div>
- </div>
-          <div data-aos="fade-left">
-          <div className="w-full">
-            <div className="card shrink-0  ">
-      <form onSubmit={handelMassage} >
-       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-2 w-full">
-       <div className="form-control">
-          <label className="label">
-          </label>
-          <input type="text" name="name" placeholder="Your Name" className="input" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-          </label>
-          <input type="email" name="email" placeholder="Your Email" className="input" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-          </label>
-          <input type="text" name="phone" placeholder="Your Namber" className="input" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-          </label>
-          <input type="text" name="subjcet" placeholder="Subjcet" className="input" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-          </label>
-          <input type="text" name="massage" placeholder="Send Massage" className="input " required />
-        </div>
-        <div className="form-control mt-6">
-
-        </div>
-       </div>
-       <button type="submit" className="btn btn-primary w-full btn-outline mt-4 ">SUBMITE</button>
-      </form>
-    </div>
-            </div>
+        <div
+          className="mt-16 flex md:flex-row flex-col
+         gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
+        >
+          <form className="flex flex-col flex-1 gap-5">
+            <input type="text" placeholder="Your Name" />
+            <input type="Email" placeholder="Your Email Address" />
+            <textarea placeholder="Your Message" rows={10}></textarea>
+            <button className="btn-primary w-fit">Send Message</button>
+          </form>
+          <div className="flex flex-col  gap-7 ">
+            {contact_info.map((contact, i) => (
+              <div
+                key={i}
+                className="flex flex-row  
+                  text-left gap-4 flex-wrap items-center"
+              >
+                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
+                  <ion-icon name={contact.logo}></ion-icon>
+                </div>
+                <p className="md:text-base text-sm  break-words">
+                  {contact.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
- 
-
-
-
-
-
-
-
-
-        </div>
-      
-      </>
-      
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

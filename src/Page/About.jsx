@@ -1,44 +1,56 @@
-import Exprence from "../component/Exprence/Exprence";
-import Myprojcet from "../component/Myprojcet/Myprojcet";
-import Skaill from "../component/Skaill/Skaill";
-import { FaArrowAltCircleDown } from "react-icons/fa";
 
 const About = () => {
+  const info = [
+    { text: "Years experience", count: "04" },
+    { text: "Completed Projects", count: "24" },
+    { text: "Companies Work", count: "06" },
+  ];
   return (
-  <>
-
-<div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <img
-          src="https://i.ibb.co/PtV8QKv/20230409224628-IMG-7255.jpg"
-          className="max-w-sm lg:w-full w-[70%] rounded-lg shadow-2xl"
-        />
-        <div>
-          <h1 className="text-3xl font-bold">
-            Learn Something Good, Do Something Better
-          </h1>
-          <p className="py-6">
-          Hello 👋, I’m Hridoy 😊, .I love to do most of the things with javaScript.I am Skilled At MERN Stack. I have a strong passion for learning & implementing new web technologies and standards. I’m currently studying (Diploma in computer Engineering 💻 ) , Dinajpur Bangladesh.
-          <br />
-          i am a MERN stack junior Web developer , I know something about the background --React.js /MongoDB--
-          </p>
-          <button
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "text-[#4441f0]  underline text-[17px] font-semibold" : ""
-            }
-          >
-          <a className="flex items-center text-center  gap-2 bg-green-500 p-2 rounded-md" href="/public/ASSERMENT_ SCIC.pdf" download={"resume.pdf"}>  RESUME <FaArrowAltCircleDown/> </a>
-          </button>
+    <section id="about" className="py-10 text-white">
+      <div className="text-center mt-8">
+        <h3 className="text-4xl font-semibold">
+          About <span className="text-cyan-600">Me</span>
+        </h3>
+        <p className="text-gray-400 my-3 text-lg">My introduction</p>
+        <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
+          <div className="p-2">
+            <div className="text-gray-300 my-3">
+              <p className="text-justify leading-7 w-11/12 mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                eos, quam vel quisquam, explicabo sit labore dignissimos optio
+                ratione quibusdam doloribus pariatur consequuntur sint.
+                Reprehenderit cupiditate possimus facere quasi voluptatem?
+              </p>
+              <div className="flex mt-10 items-center gap-7">
+                {info.map((content) => (
+                  <div key={content.text}>
+                    <h3 className="md:text-4xl text-2xl font-semibold text-white">
+                      {content.count}
+                      <span className="text-cyan-600">+</span>{" "}
+                    </h3>
+                    <span className="md:text-base text-xs">{content.text}</span>
+                  </div>
+                ))}
+              </div>
+              <br />
+              <br />
+              <a href="" download>
+                <button className="btn-primary">Download CV</button>
+              </a>
+            </div>
+          </div>
+          <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
+            <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg ">
+              <img
+                src="https://i.ibb.co/PzpgyzF/20230409234326-IMG-7354-removebg.png"
+                alt=""
+                className="w-full object-cover bg-cyan-600 rounded-xl"
+              />
+            </div>
+          </div>
         </div>
-
       </div>
-    </div>
-   <div className=" lg:px-20">
-   <Skaill></Skaill>
-   <Myprojcet></Myprojcet>
-   <Exprence></Exprence>
-   </div>
-  </>
+    </section>
   );
 };
 
